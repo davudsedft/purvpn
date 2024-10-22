@@ -29,7 +29,7 @@ jobs:
     - name: Set up Gradle
       uses: gradle/gradle-build-action@v2
       with:
-        gradle-version: '8.7'
+        gradle-version: '8.2.2'
 
     - name: Make gradlew executable
       run: chmod +x ./gradlew
