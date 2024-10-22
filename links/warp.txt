@@ -1,0 +1,1 @@
+https://api.github.com/repos/davudsedft/purcow/contents/wireguard.txt
