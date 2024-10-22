@@ -2,9 +2,14 @@
 نسخه کامل تحت نام purvpn
 <center>
   <picture>
-   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://purnet.ir/vpn/lite2.png" width="200px"  >
+   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/davudsedft/purvpn/blob/main/links/uu.jpg" width="200px"  >
 </picture>
-
+ <picture>
+   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/davudsedft/purvpn/blob/main/links/rr.jpg" width="200px"  >
+</picture>
+ <picture>
+   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/davudsedft/purvpn/blob/main/links/cc.jpg" width="200px"  >
+</picture>
 </center>
 
 برای خروجی گرفتن از کتابخانه گو
@@ -31,7 +36,9 @@ gomobile bind -ldflags '-s -w' -o purlast.aar -androidapi 21 -target android .
 
 
 سورس سرورها
-https://raw.githubusercontent.com/davudsedft/newpurnet/refs/heads/main/purkow.txt
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt
+
 
 
 طریقه ساخت apk
