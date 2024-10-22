@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:debuggable="false"
+        android:resizeableActivity="false"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.V2rayExample"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        tools:targetApi="31"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name=".Setting"
+            android:exported="false"
+            />
+        <activity
+            android:name=".Packapp"
+            android:exported="false" />
+
+        <activity
+            android:name=".vip"
+            android:exported="false" />
+        <activity
+            android:name=".Servers"
+            android:exported="false" />
+
+        <activity
+            android:name=".Game"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/provider_paths" />
+
+        <activity
+            android:name=".Video"
+            android:exported="false"
+            tools:ignore="ExtraText" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ytt" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/bule" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/app_name" />
+
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            tools:ignore="ExtraText">
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyQSTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false" />
+        </service>
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+
+        <service
+            android:name=".MyService2"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+
+
+        <service
+            android:name=".Myproxy"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+
+
+        <receiver
+            android:name=".StopServiceReceiver"
+            android:exported="true"
+            tools:ignore="IntentFilterExportedReceiver">
+        <intent-filter>
+            <action android:name="android.app.action.NOTIFICATION_RECEIVED" />
+        </intent-filter>
+    </receiver>
+
+
+
+        <receiver
+            android:name=".Stopwireguard"
+            android:exported="true"
+            tools:ignore="IntentFilterExportedReceiver">
+            <intent-filter>
+                <action android:name="android.app.action.NOTIFICATION_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".StopServiceReceiver2"
+            android:exported="true"
+            tools:ignore="IntentFilterExportedReceiver">
+
+
+        <intent-filter>
+                <action android:name="android.app.action.NOTIFICATION_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+
+        </provider>
+        <receiver
+            android:name=".MyWidgetProvider"
+            android:exported="true"
+            android:label="My Widget"
+            tools:ignore="IntentFilterExportedReceiver">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidg" />
+        </receiver>
+        <service android:name="com.wireguard.android.backend.GoBackend$VpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tttt"
+    android:gravity="center"
+    android:id="@+id/vipley"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".vip">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="10dp">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                    android:padding="20dp"
+                    tools:layout_editor_absoluteX="5dp"
+                    tools:layout_editor_absoluteY="1dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="177dp"
+                        android:layout_height="37dp"
+
+                        android:text="@string/montazerbeman" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </WebView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/na3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="right"
+            android:background="@drawable/bcg"
+            app:headerLayout="@layout/heder2"
+            app:itemTextColor="@color/yello"
+
+            app:menu="@menu/web">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center|right"
+    android:orientation="horizontal"
+    android:padding="1dp"
+    android:weightSum="10">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_weight="0"
+        android:background="@drawable/lll"
+        android:text="خاموش"
+        android:textColor="@color/ff"
+
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+
+                android:text="متصل به پورکاو"
+                android:textColor="@color/ye"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/txtconfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/ye"
+
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txttraf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+
+                android:text="ترافیک"
+                android:textColor="@color/red"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/txttrafff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/red"
+
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+
+                android:text="سرعت"
+                android:textColor="@color/gr"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/speeeeddd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/gr"
+
+                android:textSize="8sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

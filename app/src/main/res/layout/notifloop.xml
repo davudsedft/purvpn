@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:padding="1dp"
+    android:weightSum="10">
+
+    <Button
+        android:id="@+id/uuuuubb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:background="@drawable/lyaaa"
+
+        android:text="Off"
+        android:textAllCaps="false"
+        android:textColor="@color/fff"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/txtTitle2222"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textAllCaps="false"
+
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/mottaselbe"
+        android:textColor="@color/ye3"
+        android:textSize="10sp" />
+
+
+</LinearLayout>

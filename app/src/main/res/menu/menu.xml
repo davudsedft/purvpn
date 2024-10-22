@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+  >
+    <item
+        android:id="@+id/memll2"
+        app:showAsAction="always"
+        android:title=""
+        android:icon="@drawable/win">
+
+
+
+    <menu>
+
+        <item
+            android:id="@+id/app_bar_switch"
+            android:title=""
+            android:icon="@drawable/loopba"
+
+            app:actionLayout="@layout/switch_item"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/app_bar_switch2"
+            android:title=""
+            android:icon="@drawable/uuuu"
+
+            app:actionLayout="@layout/swich2_item"
+            app:showAsAction="always" />
+
+
+
+        <item
+            android:id="@+id/Setting"
+            android:title="@string/setting"
+            android:icon="@drawable/setloop"
+
+            app:showAsAction="always" />
+
+
+        <item
+            android:id="@+id/share"
+
+            android:icon="@drawable/shar"
+            android:title="@string/eshterak"
+
+
+            />
+
+
+        <item
+            android:id="@+id/twitter"
+
+            android:title="@string/twitter"
+            android:icon="@drawable/twitt"
+
+
+            />
+
+
+
+        <item
+        android:id="@+id/mem4"
+
+        android:title="@string/telegram"
+        android:icon="@drawable/tel"
+
+
+        />
+    <item
+        android:id="@+id/mem5"
+
+        android:title="@string/helpvideo"
+        android:icon="@drawable/help2"
+
+
+        />
+
+
+        <item
+            android:id="@+id/game"
+
+            android:icon="@drawable/game"
+            android:title="@string/game"
+
+
+            />
+
+        <item
+            android:id="@+id/mem3"
+
+            android:icon="@drawable/call"
+            android:title="@string/tablo"
+
+
+            />
+
+
+    </menu>
+</item>
+</menu>

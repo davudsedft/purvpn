@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="end">
+        <item> پورکاو (PF)</item>
+        <item> وارپ (ham)</item>
+        <item>ایرانی (iran)</item>
+        <item>چینی (chini)</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.V2rayExample" parent="Theme.AppCompat">
+        <item name="colorPrimary">#105dbd</item>
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:textColor">@color/purnet</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="titleTextColor">@color/black</item>
+        <item name="subtitleTextColor">@color/black</item>
+        <item name="android:itemBackground">@color/bule</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/vazir</item>
+
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Theme.V2rayExample2" parent="Theme.AppCompat">
+        <item name="colorPrimary">#C33566</item>
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:textColor">@color/purnet</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="titleTextColor">@color/black</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="subtitleTextColor">@color/black</item>
+        <item name="android:itemBackground">@color/bule</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/vazir</item>
+
+    </style>
+
+    <style name="OverFlow" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/win</item>
+    </style>
+
+    <style name="MyDialog" parent="android:Theme.Material.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackground">@color/purple_700</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:textColor">@color/yello</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="MyDialog3" parent="android:Theme.Material.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackground">@color/purnet30</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:textColor">@color/purnet3</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MyDialogStyle" parent="android:Theme.Material.Light.Dialog.NoActionBar">
+        <item name="android:buttonBarButtonStyle">@style/MyButtonsStyle</item>
+        <item name="android:colorBackground">@color/bule</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+    <style name="MyButtonsStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/purnet</item>
+    </style>
+
+    <style name="MenuTextStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/vazir</item>
+
+        <item name="android:textColor">#1E0C12</item>
+    </style>
+
+    <style name="MySwitch" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textColorPrimaryDisableOnly">#D51313</item>
+        <item name="android:fontFamily">@font/vazir</item>
+        <item name="android:colorControlActivated">#07C515</item>
+
+        <item name="android:colorForeground">#00F57F17</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+
+</resources>

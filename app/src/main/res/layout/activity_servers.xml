@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tttt"
+    android:id="@+id/serverley"
+    android:gravity="center|center_horizontal|top|center_vertical"
+    android:orientation="vertical"
+    app:layout_anchorGravity="center"
+    tools:context=".Servers">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.2"
+                android:text=""
+                android:textColor="@color/purple_700"
+                android:textSize="10dp"
+                tools:ignore="Suspicious0dp" />
+
+
+            <Button
+                android:id="@+id/powaro"
+                android:layout_width="match_parent"
+                android:layout_weight="0.3"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bcg"
+                android:gravity="center"
+                android:onClick="povaro"
+                android:text="@string/povaro"
+                android:textColor="@color/teal_200"
+                android:textSize="10sp"
+                tools:ignore="Suspicious0dp,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/external"
+                android:layout_width="match_parent"
+
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="0.3"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bcg"
+                android:gravity="center"
+                android:onClick="external"
+
+                android:text="(Vmess,ss,trojan,vless,wireguard)"
+                android:textColor="@color/teal_200"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds,Suspicious0dp,UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/loopback"
+                android:layout_width="match_parent"
+
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="0.3"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bcg"
+                android:gravity="center"
+                android:onClick="loopback"
+
+                android:text="(Loop Back)"
+                android:textColor="@color/teal_200"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds,Suspicious0dp,UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.1"
+
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bcg"
+                    android:gravity="center"
+
+                    android:text="@string/updateserverha"
+                    android:textColor="@color/greeen3"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="Suspicious0dp,UsingOnClickInXml" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/makhzantxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/light_blue_200"
+                    android:textSize="10sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/server_row2" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/na4"
+            android:layout_width="250dp"
+            android:layout_height="450dp"
+            android:layout_gravity="right"
+            android:background="@drawable/bcg"
+            app:headerLayout="@layout/header3"
+            app:itemTextColor="@color/light_blue_200"
+
+            app:menu="@menu/ping">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

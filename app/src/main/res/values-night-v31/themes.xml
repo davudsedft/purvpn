@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    Having themes.xml for night-v31 because of the priority order of the resource qualifiers.
+    -->
+</resources>
