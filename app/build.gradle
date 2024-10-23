@@ -37,7 +37,7 @@ android {
         //noinspection EditedTargetSdkVersion
         targetSdk 34
         versionCode 1
-        versionName "1.8"
+        versionName "1.9"
         setProperty("archivesBaseName", rootProject.name + "-" + versionName)
     }
 
