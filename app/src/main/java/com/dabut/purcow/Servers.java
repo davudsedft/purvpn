@@ -345,6 +345,8 @@ public class Servers extends AppCompatActivity {
 
         colorList.add(new Makhzan("مخزن ایرانی","https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt"));
         colorList.add(new Makhzan("مخزن چینی","https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity"));
+        colorList.add(new Makhzan("مخزن وایرگارد","https://raw.githubusercontent.com/davudsedft/purvpn/refs/heads/main/links/wireguard.txt"));
+
 
         String m = shomaresh.getString("shomaresh","0");
         int mm = Integer.parseInt(m);
@@ -2776,15 +2778,29 @@ private  void warp(String s){
 
             } else if (clipboardtext.startsWith("wireguard://")) {
 
-                if (lang) {
-                    connnnn = "wireguard";
 
-                } else {
-                    connnnn = "wireguard";
+                if (android.os.Build.VERSION.SDK_INT > 28){
+
+
+
+                    if (lang) {
+                        connnnn = "wireguard";
+
+                    } else {
+                        connnnn = "wireguard";
+
+                    }
+
+                    warp(clipboardtext);
+
+
+                }else {
+                    Toast.makeText(context, " ورژن اندروید پایین است", Toast.LENGTH_SHORT).show();
 
                 }
 
-                warp(clipboardtext);
+
+
 
 
 
@@ -7335,7 +7351,118 @@ final AlertDialog dialog = builder.create();
                         Toast.makeText(context, "اینترنت را بررسی کنید", Toast.LENGTH_SHORT).show();
                     }
 
-                }else {
+                } else if (position == 4) {
+
+
+                    if (android.os.Build.VERSION.SDK_INT > 28){
+
+                        if (isConnected) {
+
+
+
+
+                            button.setText("درحال دریافت سرورها...");
+                            button.setTextColor(Color.RED);
+                            Timer timer = new Timer();
+                            // new RetrieveFeedTask().execute("https://www.google.com");
+
+                            // Schedule a task to run after 3 seconds
+                            timer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+
+
+
+                                    executor4.submit(() -> {
+
+                                        String url = makhzan1.link;
+
+                                        if (isLinkValid("https://github.com")) {
+                                            System.out.println("لینک معتبر است.");
+
+
+                                            URL textUrl = null;
+                                            String utext5 = null;
+
+                                            System.out.println("سرور چینی");
+
+                                            SharedPreferences.Editor editor = makhzan.edit();
+                                            editor.putString("makhzan" ,"مخزن:"+makhzan1.name);
+
+                                            editor.apply();
+
+
+
+
+                                            // String[] linkstring = utext.split("https://");
+
+
+                                            linq2 = getSharedPreferences("linq2", Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor iran2edit = linq2.edit();
+
+                                            iran2edit.putString(Linq2, makhzan1.link);
+                                            iran2edit.apply();
+
+
+
+
+                                            try {
+                                                Thread.sleep(1000);
+                                            } catch (InterruptedException e) {
+                                                throw new RuntimeException(e);
+                                            }
+
+
+
+
+                                            vmesserver.clear();
+                                            vmessgreen.clear();
+
+                                            number = getSharedPreferences("number", MODE_PRIVATE);
+                                            SharedPreferences.Editor edito = number.edit();
+                                            edito.putInt("number", vmesserver.size());
+                                            edito.apply();
+                                            runOnUiThread(() -> {
+
+                                                adapter.notifyDataSetChanged();
+
+                                            });
+
+
+                                            MyThread myThread = new MyThread();
+                                            myThread.start();
+
+
+
+
+
+                                        } else {
+                                            System.out.println("لینک معتبر نیست یا وجود ندارد.");
+                                            runOnUiThread(() -> {
+                                                button.setText("خطا در دریافت");
+
+                                            });
+
+
+                                        }
+
+
+                                    });
+                                    executor4.shutdown();
+
+
+                                }
+                            }, 2000);
+
+
+                        } else {
+                            Toast.makeText(context, "اینترنت را بررسی کنید", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+
+
+                } else {
                     if (isConnected) {
 
 
@@ -7459,7 +7586,7 @@ final AlertDialog dialog = builder.create();
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position==0 || position == 1 || position == 2){
+                if (position==0 || position == 1 || position == 2 || position == 3){
                     Toast.makeText(context, "غیر قابل حذف", Toast.LENGTH_SHORT).show();
 
                 }else {
@@ -7479,11 +7606,11 @@ final AlertDialog dialog = builder.create();
                     makhzansave.edit().clear().apply();
 
 
-                    for (int i=0;i<colorList.size()-3;i++){
+                    for (int i=0;i<colorList.size()-4;i++){
 
                         SharedPreferences.Editor  edit =  makhzansave.edit();
-                        edit.putString("namemakhzan"+Integer.toString(3+i) , colorList.get(3+i).name);
-                        edit.putString("linkmakhzan"+Integer.toString(3+i) , colorList.get(3+i).link);
+                        edit.putString("namemakhzan"+Integer.toString(4+i) , colorList.get(4+i).name);
+                        edit.putString("linkmakhzan"+Integer.toString(4+i) , colorList.get(4+i).link);
 
                         edit.apply();
 
@@ -7558,11 +7685,11 @@ final AlertDialog dialog = builder.create();
                     colorList.add(new Makhzan(namemkj ,linkmh));
 
 
-                    for (int i=0;i<colorList.size()-3;i++){
+                    for (int i=0;i<colorList.size()-4;i++){
 
                         SharedPreferences.Editor  edit =  makhzansave.edit();
-                        edit.putString("namemakhzan"+Integer.toString(3+i) , colorList.get(3+i).name);
-                        edit.putString("linkmakhzan"+Integer.toString(3+i) , colorList.get(3+i).link);
+                        edit.putString("namemakhzan"+Integer.toString(4+i) , colorList.get(4+i).name);
+                        edit.putString("linkmakhzan"+Integer.toString(4+i) , colorList.get(4+i).link);
 
                         edit.apply();
 

@@ -1104,8 +1104,12 @@ pingtest.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         if (Config.getString(Name2, "").equals("wireguard")) {
-            try {
+
+
+
+        try {
                 if (mb) {
+                    pingtest.setText("در حال تست");
 
 
                     new Thread(new Runnable() {
