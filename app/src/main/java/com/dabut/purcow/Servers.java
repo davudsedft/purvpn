@@ -1485,48 +1485,6 @@ public class Servers extends AppCompatActivity {
 
 
 /////////////////////
-        povarbtn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-
-                if (isNetworkAvailable()  ) {
-                    if (http != null){
-                        http.interrupt();
-                    }
-                    if (executor != null){
-                    executor.shutdownNow();
-                   // Thread.currentThread().interrupt();
-
-                }
-
-
-                 if (executor2 != null)  {
-
-                     if (executor2.isTerminated()){
-
-                         cont();
-
-                     }else {
-                         dialogg2();
-                     }
-                 }
-
-
-
-
-
-                    // show();
-                } else {
-                    Toast.makeText(Servers.this, getString(R.string.barresinet), Toast.LENGTH_SHORT).show();
-                }
-
-
-
-
-
-                return true;
-            }
-        });
 
         pova = getSharedPreferences("pova", Context.MODE_PRIVATE);
 
@@ -5245,9 +5203,7 @@ private  void warp(String s){
     public void povaro(View view) {
         String m = pova.getString(Pova , "");
         
-        if (m.equals("")){
-            Toast.makeText(this, "کلیک طولانی کنید!", Toast.LENGTH_SHORT).show();
-        }else {
+
 
             Backend backend = PersistentConnectionProperties.getInstance().getBackend();
 
@@ -5271,26 +5227,36 @@ private  void warp(String s){
             }
 
 
+            if (isNetworkAvailable()  ) {
+                if (http != null){
+                    http.interrupt();
+                }
+                if (executor != null){
+                    executor.shutdownNow();
+                    // Thread.currentThread().interrupt();
 
-            SharedPreferences.Editor shEdit = Pref.edit();
-            shEdit.putString(Name, m);
-            shEdit.apply();
-            // V2rayController.StopV2ray(getApplicationContext());
-            SharedPreferences.Editor shEdit2 = Config.edit();
-            //  shEdit2.remove(Name2);
-            shEdit2.putString(Name2, getString(R.string.povaro));
-            shEdit2.apply();
-            Intent ii = new Intent(Servers.this, MainActivity.class);
-            ii.putExtra("kool", "rovshan");
-            ii.putExtra("copyte", m);
-
-            startActivity(ii);
-            finish();
+                }
 
 
-        }
+                if (executor2 != null)  {
+
+                    if (executor2.isTerminated()){
+
+                        cont();
+
+                    }else {
+                        dialogg2();
+                    }
+                }
 
 
+
+
+
+                // show();
+            } else {
+                Toast.makeText(Servers.this, getString(R.string.barresinet), Toast.LENGTH_SHORT).show();
+            }
 
 
 
@@ -6951,6 +6917,36 @@ finish();*/
                                   public void run() {
                                       povarbtn.setTextColor(Color.GREEN);
                                       povarbtn.setText(getString(R.string.aaaali));
+
+
+
+                                      SharedPreferences.Editor shEdit = Pref.edit();
+                                      shEdit.putString(Name, people.get(0).getName());
+                                      shEdit.apply();
+                                      // V2rayController.StopV2ray(getApplicationContext());
+                                      SharedPreferences.Editor shEdit2 = Config.edit();
+                                      //  shEdit2.remove(Name2);
+                                      shEdit2.putString(Name2, getString(R.string.povaro));
+                                      shEdit2.apply();
+                                      Intent ii = new Intent(Servers.this, MainActivity.class);
+                                      ii.putExtra("kool", "rovshan");
+                                      ii.putExtra("copyte", people.get(0).getName());
+
+                                      startActivity(ii);
+                                      finish();
+
+
+
+
+
+
+
+
+
+
+
+
+
                                   }
                               });
                                 myt.interrupt();

@@ -75,7 +75,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/ddd"
                     android:gravity="center"
-                    android:onClick="config"
                     android:textColor="@color/yello"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -227,7 +226,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="2.5"
-                android:gravity="bottom|center"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:weightSum="3">
 
@@ -246,40 +245,16 @@
                     android:layout_weight="0.5"
                     app:srcCompat="@drawable/yel" />
 
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/vpnBtn"
+                <Button
+                    android:id="@+id/btnvpn"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignParentStart="true"
-
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginEnd="120dp"
-                    android:layout_marginBottom="50dp"
-                    android:layout_weight="2"
-                    android:clickable="true"
-                    android:shape="ring"
-                    android:tag="1"
-                    app:cardCornerRadius="75dp">
-
-                    <ImageView
-                        android:id="@+id/imgbtn"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/circle" />
-
-                    <TextView
-                        android:id="@+id/txtbtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="OFF"
-                        android:textSize="22sp" />
-                </androidx.cardview.widget.CardView>
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_button"
+                    android:gravity="center"
+                    android:text="OFF"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

@@ -154,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
     boolean isLightTheme = true;
     private Intent servIntent,servIntent2;
     static boolean lang = true;
+    Button btnvpn;
     CardView card1;
     int count = 0;
     private Handler progressHandler;
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
     // FirebaseAuth firebaseAuth;
   //  String url = "aHR0cHM6Ly9wdXJuZXQuaXIvanNvbi9uZXcuanNvbg==";
-    String url ="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RhdnVkc2VkZnQvcHVyY293L21haW4vdmVyc2lvbnB1YmxpYy5qc29u";
+    String url ="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RhdnVkc2VkZnQvcHVydnBuL3JlZnMvaGVhZHMvbWFpbi9saW5rcy92ZXJzaW9ucHVibGljLmpzb24=";
     String aa,bb,cc ,dd,hh,kk= "http";
     ToggleButton drawer_switch;
     ToggleButton proxyswich;
@@ -181,13 +182,13 @@ public class MainActivity extends AppCompatActivity {
     String offerChannelId = "DEV7DEV_AXL_CH_ID";
     PendingIntent mpIntent;
     RelativeLayout layout;
-    private ImageView imgbtn,connected_country;
+    private ImageView connected_country;
     String vipcon = "";
     String deviceid;
     private long backPressedTime;
     private Toast backToast;
     private DrawerLayout drawerLayout ;
-    private TextView connection_speed, connection_traffic, connection_time, connected_server_delay, txtbtn ,pingtest,btnlogo,bbcon2;
+    private TextView connection_speed, connection_traffic, connection_time, connected_server_delay ,pingtest,btnlogo,bbcon2,textView4;
     //  private EditText v2ray_json_config;
     private static final int PERMISSION_REQUEST_CODE = 200;
     private BroadcastReceiver v2rayBroadCastReceiver;
@@ -290,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnlogo = findViewById(R.id.btnlogo);
         bbcon2 = findViewById(R.id.btn_connection2);
+        btnvpn  = findViewById(R.id.btnvpn);
 
         try {
             backend.getRunningTunnelNames();
@@ -387,7 +389,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 /////////////////////خدثفهپث
-
+        textView4 = findViewById(R.id.textView4);
 
         if (isLightTheme) {
              layout = (RelativeLayout)findViewById(R.id.mainlay);
@@ -408,15 +410,13 @@ public class MainActivity extends AppCompatActivity {
             connected_server_delay = findViewById(R.id.connected_server_delay);
             connection_traffic = findViewById(R.id.connection_traffic);
 
-         TextView   connection_duration = (TextView) findViewById(R.id.connection_duration);
             connection_speed = findViewById(R.id.connection_speed);
-           TextView textView4  = (TextView) findViewById(R.id.textView4);
            pingtest.setTextColor(Color.parseColor("#F86295"));
            b.setTextColor(Color.parseColor("#F86295"));
             connected_server_delay.setTextColor(Color.parseColor("#FF000000"));
             btnlogo.setTextColor(Color.parseColor("#FF000000"));
             connection_traffic.setTextColor(Color.parseColor("#FF000000"));
-            connection_duration.setTextColor(Color.parseColor("#FF000000"));
+            connection_time.setTextColor(Color.parseColor("#FF000000"));
             connection_speed.setTextColor(Color.parseColor("#FF000000"));
             textView4.setTextColor(Color.parseColor("#FF000000"));
 
@@ -452,8 +452,7 @@ public class MainActivity extends AppCompatActivity {
         Config = getSharedPreferences("config", Context.MODE_PRIVATE);
         String nameconf = Config.getString(Name2, "");
 
-        TextView txtconf = (TextView) findViewById(R.id.textView4) ;
-        txtconf.setText(nameconf);
+        textView4.setText(nameconf);
 
 
         Bundle resultIntent = getIntent().getExtras();
@@ -925,9 +924,6 @@ wireguard();
 
 
         card1  = (CardView) findViewById(R.id.card1);
-        CardView cardView = (CardView) findViewById(R.id.vpnBtn);
-        txtbtn = (TextView) findViewById(R.id.txtbtn);
-        imgbtn = (ImageView) findViewById(R.id.imgbtn);
 
 
 
@@ -956,7 +952,6 @@ wireguard();
         card1.setBackgroundResource(R.drawable.df);
 
         card2.setBackgroundResource(R.drawable.dsss);
-        cardView.setBackgroundResource(R.drawable.df);
 
 
         if (Build.VERSION.SDK_INT >= 33) {
@@ -987,10 +982,11 @@ wireguard();
 
                 if (Config.getString(Name2,"").equals("wireguard")){
 
+
+
                 }else{
                     mb = true;
-                    txtbtn.setText("ON");
-                    txtbtn.setTextColor(Color.GREEN);
+                  setConnected();
                 }
 
 
@@ -1002,15 +998,13 @@ wireguard();
                 if (!Config.getString(Name2,"").equals("wireguard")){
                     mb = false;
 
-                    txtbtn.setText("OFF");
-                    txtbtn.setTextColor(Color.rgb(219, 102, 200));
+                  setDisconnected();
 
                 }
 
 
                 break;
             case "V2RAY_CONNECTING":
-                txtbtn.setText("در حال اتصال");
                 break;
             default:
                 break;
@@ -1025,7 +1019,7 @@ wireguard();
             activityResultLauncher.launch(intent);
         }
 
-        cardView.setOnClickListener(view -> {
+        btnvpn.setOnClickListener(view -> {
 
 
 
@@ -1256,16 +1250,14 @@ pingtest.setOnClickListener(new View.OnClickListener() {
                     case CONNECTED:
 
                         if (!Config.getString(Name2,"").equals("wireguard")){
-                            txtbtn.setText("ON");
                             mb = true;
-                            imgbtn.setBackgroundResource(R.drawable.kkk);
                             card1.setBackgroundResource(R.drawable.df);
 
                             pingtest.setBackgroundResource(R.drawable.greeeeeen);
                             bbcon2.setBackgroundResource(R.drawable.qermez);
-                            txtbtn.setTextColor(Color.GREEN);
                             btnlogo.setBackgroundResource(R.drawable.sefid);
 
+                            setConnected();
 
                         }
 
@@ -1281,15 +1273,13 @@ pingtest.setOnClickListener(new View.OnClickListener() {
                     case DISCONNECTED:
                         mb = false;
                         if (!Config.getString(Name2,"").equals("wireguard")){
-                            txtbtn.setText("OFF");
                             //  connection.setBackgroundColor("");
-                            imgbtn.setBackgroundResource(R.drawable.circle);
-                            txtbtn.setTextColor(Color.rgb(219, 102, 200));
                             card1.setBackgroundResource(R.drawable.df);
                             pingtest.setBackgroundResource(R.drawable.ddd);
                             bbcon2.setBackgroundResource(R.drawable.ddd);
                             btnlogo.setBackgroundResource(R.drawable.ddd);
 
+                            setDisconnected();
                             //  simpleNotification();
                         }
 
@@ -1298,7 +1288,6 @@ pingtest.setOnClickListener(new View.OnClickListener() {
 
                         break;
                     case CONNECTING:
-                        txtbtn.setText("متصل شوید");
                         break;
                     default:
                         break;
@@ -2534,10 +2523,7 @@ public void wireguard(){
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            txtbtn.setText("OFF");
                             //  connection.setBackgroundColor("");
-                            imgbtn.setBackgroundResource(R.drawable.circle);
-                            txtbtn.setTextColor(Color.rgb(219, 102, 200));
                             card1.setBackgroundResource(R.drawable.df);
                             pingtest.setBackgroundResource(R.drawable.ddd);
 
@@ -2545,6 +2531,8 @@ public void wireguard(){
                             btnlogo.setBackgroundResource(R.drawable.ddd);
 
 
+
+                            setDisconnected();
 
 
 
@@ -2566,22 +2554,18 @@ mb = true;
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            txtbtn.setText("ON");
                             mb = true;
-                            imgbtn.setBackgroundResource(R.drawable.kkk);
                             card1.setBackgroundResource(R.drawable.df);
 
                             pingtest.setBackgroundResource(R.drawable.greeeeeen);
-                            txtbtn.setTextColor(Color.GREEN);
 
 
                             bbcon2.setBackgroundResource(R.drawable.qermez);
-                            txtbtn.setTextColor(Color.GREEN);
                             btnlogo.setBackgroundResource(R.drawable.sefid);
 
 
 
-
+                            setConnected();
 
 
 
@@ -2627,12 +2611,9 @@ mb = true;
     runOnUiThread(new Runnable() {
         @Override
         public void run() {
-            txtbtn.setText("ON");
-            imgbtn.setBackgroundResource(R.drawable.kkk);
             card1.setBackgroundResource(R.drawable.df);
 
             pingtest.setBackgroundResource(R.drawable.greeeeeen);
-            txtbtn.setTextColor(Color.GREEN);
         }
     });
 
@@ -2648,16 +2629,13 @@ mb = true;
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        txtbtn.setText("ON");
                         mb = true;
-                        imgbtn.setBackgroundResource(R.drawable.kkk);
                         card1.setBackgroundResource(R.drawable.df);
 
                         pingtest.setBackgroundResource(R.drawable.greeeeeen);
-                        txtbtn.setTextColor(Color.GREEN);
                         bbcon2.setBackgroundResource(R.drawable.qermez);
                         btnlogo.setBackgroundResource(R.drawable.sefid);
-
+                        setConnected();
                         mb = true;
 
 
@@ -2681,12 +2659,9 @@ mb = true;
                 mb=false;
 
 
+                    setDisconnected();
 
-
-                        txtbtn.setText("OFF");
                         //  connection.setBackgroundColor("");
-                        imgbtn.setBackgroundResource(R.drawable.circle);
-                        txtbtn.setTextColor(Color.rgb(219, 102, 200));
                         card1.setBackgroundResource(R.drawable.df);
                         pingtest.setBackgroundResource(R.drawable.ddd);
                         bbcon2.setBackgroundResource(R.drawable.ddd);
@@ -2944,5 +2919,17 @@ public  void loopthead(){
             }
         }).start();
     }
+
+    private void setDisconnected() {
+        btnvpn.setBackground(getResources().getDrawable(R.drawable.circle_button));
+        btnvpn.setText("OFF");
+    }
+
+    private void setConnected() {
+        btnvpn.setBackground(getResources().getDrawable(R.drawable.circle_button_on));
+        btnvpn.setText("ON");
+    }
+
+
     }
 

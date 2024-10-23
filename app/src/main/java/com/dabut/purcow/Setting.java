@@ -19,6 +19,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -73,8 +74,13 @@ public class Setting extends AppCompatActivity {
     private static final String TAG = "DownloadActivity";
     LinearLayout layout;
     String utext2;
+
+
+    private long downloadID;
+
+
     Context context;
-    String url ="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RhdnVkc2VkZnQvcHVyY293L21haW4vdmVyc2lvbnB1YmxpYy5qc29u";
+    String url ="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RhdnVkc2VkZnQvcHVydnBuL3JlZnMvaGVhZHMvbWFpbi9saW5rcy92ZXJzaW9ucHVibGljLmpzb24=";
     private static final int PERMISSION_REQUEST_CODE = 200;
     AlertDialog.Builder dialogBuilder3,dialogBuilder4,alertDialogBuilder2;
     SharedPreferences Pref,Config,prefssh,cloudsh,prefs2sh,prefs3sh,preferences2,preferences;
@@ -839,12 +845,31 @@ public class Setting extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int id) {
 
 
+                                        if (utext2 != null){
+
+
+                                            progressDialog = new ProgressDialog(Setting.this, R.style.MyDialog);
+                                            progressDialog.setMessage("لطفا صبر کنید...");
+                                            progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                                            progressDialog.setCancelable(false);
+                                            progressDialog.setMax(100);
+                                            progressDialog.show();
+
+                                            startDownload(utext2);
+
+
+                                            registerReceiver(onDownloadComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 
 
-                                     downloadAndInstallApk(context , utext2);
 
 
+
+
+
+                                        }else {
+                                            Toast.makeText(context, "مشکلی رخ داد", Toast.LENGTH_SHORT).show();
+                                        }
 
 
 
@@ -1091,4 +1116,76 @@ public class Setting extends AppCompatActivity {
 
 
     }
+    private BroadcastReceiver onDownloadComplete = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+
+            progressDialog.dismiss();
+            long id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
+            if (downloadID == id) {
+                Intent installIntent = new Intent(Intent.ACTION_VIEW);
+                installIntent.setDataAndType(downloadManager.getUriForDownloadedFile(downloadID), "application/vnd.android.package-archive");
+                installIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                context.startActivity(installIntent);
+                progressDialog.dismiss();            }
+        }
+    };
+
+
+    private void startDownload(String url) {
+
+        File previousFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "purvpnupdate.apk");
+        if (previousFile.exists()) {
+            previousFile.delete(); // حذف فایل قبلی
+        }
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+        request.setTitle("دانلود نسخه جدید");
+        request.setDescription("purvpn...");
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "purvpnupdate.apk");
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+
+        DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+        downloadID = manager.enqueue(request);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean downloading = true;
+
+                while (downloading) {
+                    DownloadManager.Query query = new DownloadManager.Query();
+                    query.setFilterById(downloadID);
+                    Cursor cursor = manager.query(query);
+                    if (cursor.moveToFirst()) {
+                        @SuppressLint("Range")
+                        int bytesDownloaded = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+                        @SuppressLint("Range")
+                        int bytesTotal = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
+
+                        if (bytesTotal > 0) {
+                            final int progress = (int) ((bytesDownloaded * 100L) / bytesTotal);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    progressDialog.setProgress(progress);
+                                }
+                            });
+                        }
+
+                        @SuppressLint("Range")
+                        int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+                        if (status == DownloadManager.STATUS_SUCCESSFUL || status == DownloadManager.STATUS_FAILED) {
+                            downloading = false;
+                        }
+                    }
+                    cursor.close();
+                }
+            }
+        }).start();
+    }
+
+
+
 }
