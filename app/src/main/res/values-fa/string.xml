@@ -1,115 +1,0 @@
-<resources>
-    <string name="app_name">PurVpn</string>
-    <string name="sabr"> کمی صبر کنین....</string>
-    <string name="moshkel">مشکلی رخ داد دوباره امتحان کنید</string>
-    <string name="changetheme">تغییر پوسته</string>
-    <string name="bakhshberuz">بخش بروز رسانی</string>
-    <string name="chekari">چه کاری برات انجام بدم؟</string>
-    <string name="barresiup">بررسی اپدیت</string>
-    <string name="enseraf">انصراف</string>
-    <string name="varedkonconfig"> کانفیگ را وارد کنید</string>
-    <string name="daryaft">در حال دریافت ...</string>
-    <string name="barresiserver">در حال بررسی</string>
-    <string name="masrafdo">مصرف:</string>
-    <string name="sabkon">صبر کن </string>
-    <string name="avvalroshan">اول روشن کن</string>
-    <string name="mojde">مژده</string>
-    <string name="noskhe">نسخه جدید موجود است</string>
-    <string name="danlodnoskhe">دانلود نسخه جدید</string>
-    <string name="badan">بعدا انجام میدم</string>
-    <string name="qodrat">قدرت گرفته توسط داود</string>
-    <string name="tabrik">تبریک میگم ..</string>
-    <string name="lastnoskhe">شما آخرین نسخه را نصب دارین</string>
-    <string name="bakhshweb">بخش وب</string>
-    <string name="serverfree">🥉بخش سرورها🥉</string>
-    <string name="testserver">📈 تست سرور 📉</string>
-    <string name="poolserver">🎖️ سرورهای اختصاصی 🎖️</string>
-    <string name="pasokh">پاسخ:</string>
-    <string name="montazerbeman">لطفا منتظر بمانید:</string>
-    <string name="homee">رفتن به صفحه اصلی:</string>
-    <string name="mandanhere">ماندن در همین صفحه</string>
-    <string name="povaro">پوارو سرور</string>
-    <string name="updateserverha">بروزرسانی سرورها</string>
-    <string name="barresinet">اینترنت را بررسی کنید</string>
-    <string name="zaban">تغییر زبان</string>
-    <string name="telegram">ربات تلگرام</string>
-    <string name="helpvideo">ویديوی آموزشی</string>
-    <string name="update">بروزرسانی</string>
-    <string name="tablo">تابلو اعلانات</string>
-
-    <string name="game">سرگرمی</string>
-    <string name="iradd">کانفیگ  ایراد دارد</string>
-    <string name="daryaftnashod">سرور دریافت نشده</string>
-    <string name="done">کانفیگ اعمال شد</string>
-    <string name="external">سرور خارجی</string>
-    <string name="copyyyy">کانفیگ کپی نکردی</string>
-    <string name="webettesal">در حال  اتصال به وب ...</string>
-    <string name="doneweb">متصل  به وب ...</string>
-    <string name="begun">جستجو آغاز شد...</string>
-    <string name="aaaali">سرور با پینگ عالی پیدا شد!</string>
-    <string name="search">  پوارو دنبال سرور...</string>
-    <string name="search2">  پوارو جستجو میکند   ...</string>
-    <string name="notfound">سرور پیدا نشد</string>
-    <string name="shory">آغاز عملیات</string>
-    <string name="qettesal">قطع اتصال</string>
-    <string name="mottaselbe">متصل شد به:</string>
-    <string name="savecon">هر کانفیگی که از بخش وی ای پی اعمال بشه اینجا ذخیره میشه.و دسترسی سریعتر به کانفیگها خواهید داشت</string>
-    <string name="vip1">vip ایرانسل گیمینگ</string>
-    <string name="vip2">ایرانسل vip2</string>
-    <string name="vip3">ایرانسل vip3</string>
-    <string name="vip4">وای فای vip</string>
-    <string name="vip5">وای فای vip2</string>
-    <string name="vip6">وای فایvip3</string>
-    <string name="vip7">همراه vip1</string>
-    <string name="vip8">همراهvip2</string>
-    <string name="zakhireramz">ذخیره رمز</string>
-    <string name="hamishesave">رمز را برای همیشه ذخیره کن</string>
-    <string name="zakhire">ذخیره</string>
-    <string name="secc">ثانیه</string>
-    <string name="website">از بخش وب خارج میشی؟</string>
-    <string name="yesss">بله</string>
-    <string name="kheyr">خیر</string>
-    <string name="gamexxit">از بازی خارج میشی؟</string>
-    <string name="zakhirepass">ذخیره دائمی رمز</string>
-    <string name="emal"> اعمال شد</string>
-    <string name="dns">تغییر دی ان اس</string>
-    <string name="dnsp">پیشفرض پورکاو</string>
-    <string name="tayid">تایید</string>
-    <string name="onvan">تغییر دی ان اس</string>
-    <string name="loopbak">لوپ خاموش</string>
-    <string name="loopbakon">لوپ روشن</string>
-    <string name="loopser">لوپ کانفیگ</string>
-    <string name="ejraloop">لوپ در حال اجراست</string>
-    <string name="off">خاموش</string>
-    <string name="lppstop">لوپ متوقف شد</string>
-    <string name="loopstrt">لوپ استارت شد</string>
-    <string name="talash">تلاش مجدد</string>
-    <string name="fragment">تنظیمات لوپ</string>
-    <string name="port">"پورت بین ۱ تا ۶۵۵۳۰ "</string>
-    <string name="betwin">سایز بسته بین ۲۰ تا ۲۰۰</string>
-    <string name="timeset">زمان بین ۱۰۰ تا ۲۰۰۰</string>
-    <string name="cloud">سرور کلادفلر</string>
-    <string name="khaliha">در صورت خالی بودن یک بخش و تایید زدن ‌برای همان قسمت پیشفرض اعمال میشود</string>
-    <string name="feli">تنظیمات فعلی</string>
-    <string name="zakhiree">ذخیره</string>
-    <string name="nashod">اعمال نشد</string>
-    <string name="setting">تنظیمات</string>
-    <string name="nazarat">گزارش باگ</string>
-    <string name="hadsadad">سرگرمی۲</string>
-    <string name="eshterak">پورکاو برای دوستان</string>
-    <string name="share">پورکاو برای دوستان</string>
-    <string name="looptanz">تنظیمات لوپ</string>
-    <string name="toonelsetting">تونل نرم افزارها</string>
-    <string name="notnet">هر نرم افزاری که تیک بزنین وی پی ان روش اعمال نمیشه.و نیاز نیس برای استفاده از آن نرم افزار وی پی ان را خاموش کنید.مثل نرم افزارهای بانکی.</string>
-    <string name="pingtest">تست پینگ</string>
-    <string name="copy">اشتراک گذاری سرور</string>
-    <string name="serverp">مخزن پورکاو</string>
-    <string name="servert">مخزن چینی</string>
-    <string name="etc">مخزن ایرانی</string>
-    <string name="myproxy">حالت پروکسی فعال</string>
-    <string name="proxyon">حالت پروکسی</string>
-    <string name="proxyoff">حالت وی پی ان</string>
-    <string name="pishham">پیشفرض همراه</string>
-    <string name="twitter">توییتر</string>
-
-</resources>
