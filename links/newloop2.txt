@@ -105,7 +105,7 @@
               {
                 "encryption": "none",
                 "flow": "",
-                "id": "f758e2ae-eab4-4430-9755-30998e0813de",
+                "id": "2cbc0ae9-7b0a-448f-a68b-f554128c14c4",
                 "level": 8,
                 "security": "auto"
               }
@@ -120,16 +120,16 @@
           "allowInsecure": false,
           "fingerprint": "randomized",
           "publicKey": "",
-          "serverName": "d778d41f.sinamobile.pages.dev",
+          "serverName": "4b922de2.fastpurnet2-a1r.pages.dev",
           "shortId": "",
           "show": false,
           "spiderX": ""
         },
         "wsSettings": {
           "headers": {
-            "Host": "d778d41f.sinamobile.pages.dev"
+            "Host": "4b922de2.fastpurnet2-a1r.pages.dev"
           },
-          "path": "/d778d41f.sinamobile.pages.dev/?ed=2560"
+          "path": "/4b922de2.fastpurnet2-a1r.pages.dev/?ed=2560"
         }
       },
       "tag": "proxy"
@@ -151,7 +151,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "example.com purnet",
+  "remarks": "4b922de2.fastpurnet2-a1r.pages.dev purlite",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
