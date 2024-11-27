@@ -115,7 +115,7 @@
               {
                 "encryption": "none",
                 "flow": "",
-                "id": "94b3cbba-e6ac-485a-9481-976a0916eab9",
+                "id": "4c314a6b-dc73-453c-ac4e-6ef9e7eec2ac",
                 "level": 8
               }
             ]
@@ -127,21 +127,18 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "alpn": [
-            "h2"
-          ],
-          "fingerprint": "chrome",
+          "fingerprint": "randomized",
           "publicKey": "",
-          "serverName": "esetSEcUriTyLicENSE.URNuVSg.wOrkeRS.dev",
+          "serverName": "7f039367.newlool-d4s.pages.dev",
           "shortId": "",
           "show": false,
           "spiderX": ""
         },
         "wsSettings": {
           "headers": {
-            "Host": "EsEtSeCuRITYLIceNSe.urNuvsg.WORKers.DEV"
+            "Host": "7f039367.newlool-d4s.pages.dev"
           },
-          "path": "/"
+          "path": "/7f039367.newlool-d4s.pages.dev/?ed=2560"
         }
       },
       "tag": "proxy"
@@ -163,7 +160,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "👉🆔",
+  "remarks": "youtube.com/@purnet purlite",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
