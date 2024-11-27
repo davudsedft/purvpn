@@ -1,3 +1,6 @@
+trojan://auto@104.25.254.4:2087?path=%2Ftrojanfree-76s.pages.dev&security=tls&host=trojanfree-76s.pages.dev&fp=randomized&type=ws&sni=trojanfree-76s.pages.dev#All-%40V2ray_Alpha-2
+trojan://auto@104.20.21.78:443?path=%2Fb96ef9ae.trojanfree-76s.pages.dev%2F&security=tls&host=b96ef9ae.trojanfree-76s.pages.dev&type=ws&sni=b96ef9ae.trojanfree-76s.pages.dev#All-%40V2ray_Alpha-3
+
 vless://cfd5f7e1-937f-4477-ae3e-b4a970ec7fb1@157.90.172.231:49755?security=none&type=tcp#🔒 VL-TCP-NONE 🇩🇪 DE-157.90.172.231:49755
 vless://d342d11e-d424-4583-b36e-524ab1f0afa4@49.12.191.34:1001?security=tls&sni=a.mifeng.us.kg&type=ws&host=a.mifeng.us.kg&path=%2F%3Fed%3D2560#🔒 VL-WS-TLS 🇩🇪 DE-49.12.191.34:1001
 vless://d342d11e-d424-4583-b36e-524ab1f0afa4@45.94.31.109:1001?security=tls&sni=a.mifeng.us.kg&type=ws&host=a.mifeng.us.kg&path=%2F%3Fed%3D2560#🔒 VL-WS-TLS 🇳🇱 NL-45.94.31.109:1001
