@@ -109,8 +109,8 @@
       "settings": {
         "vnext": [
           {
-            "address": "127.0.0.1",
-            "port": 2012,
+            "address": "104.26.1.108",
+            "port": 443,
             "users": [
               {
                 "encryption": "none",
@@ -160,7 +160,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "iuiu",
+  "remarks": "oo",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
