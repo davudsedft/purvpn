@@ -105,7 +105,7 @@
         "xudpConcurrency": 8,
         "xudpProxyUDP443": ""
       },
-      "protocol": "vless",
+      "protocol": "vmess",
       "settings": {
         "vnext": [
           {
@@ -113,10 +113,9 @@
             "port": 2012,
             "users": [
               {
-                "encryption": "none",
-                "flow": "",
-                "id": "1a1eff5f-97b8-4a4e-910d-6415441b371a",
-                "level": 8
+                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+                "level": 8,
+                "security": "auto"
               }
             ]
           }
@@ -127,21 +126,15 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "alpn": [
-            "http/1.1"
-          ],
-          "fingerprint": "randomized",
-          "publicKey": "",
-          "serverName": "trojanyu.pages.dev",
-          "shortId": "",
-          "show": false,
-          "spiderX": ""
+          "fingerprint": "",
+          "serverName": "",
+          "show": false
         },
         "wsSettings": {
           "headers": {
-            "Host": "trojanyu.pages.dev"
+            "Host": "67.220.66.51"
           },
-          "path": "/TELEGRAM-MARAMBASHI_MARAMBASHI/?ed=2560"
+          "path": "linkvws"
         }
       },
       "tag": "proxy"
@@ -163,7 +156,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "🔒 VL-WS-TLS 🏴‍☠️ NA-172.66.46.224:443",
+  "remarks": "uuu",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
