@@ -105,7 +105,7 @@
         "xudpConcurrency": 8,
         "xudpProxyUDP443": ""
       },
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
@@ -113,9 +113,10 @@
             "port": 2012,
             "users": [
               {
-                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-                "level": 8,
-                "security": "auto"
+                "encryption": "none",
+                "flow": "",
+                "id": "59860b15-b2d9-47f9-9b92-81bd1639fcc5",
+                "level": 8
               }
             ]
           }
@@ -126,15 +127,18 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "fingerprint": "",
-          "serverName": "",
-          "show": false
+          "fingerprint": "random",
+          "publicKey": "",
+          "serverName": "2-212sdf.hc2021.cfd",
+          "shortId": "",
+          "show": false,
+          "spiderX": ""
         },
         "wsSettings": {
           "headers": {
-            "Host": "67.220.66.51"
+            "Host": "2-212sdf.hc2021.cfd"
           },
-          "path": "linkvws"
+          "path": "/?ed=2560"
         }
       },
       "tag": "proxy"
@@ -156,7 +160,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "iiii",
+  "remarks": "A-104.18.41.190:8443",
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
