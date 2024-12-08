@@ -1,1 +1,1 @@
-vless://ee62291f-97e6-4b8f-ad61-5b150b227003@104.21.235.205:2087?security=tls&sni=g4.ferdowsi.shop&type=grpc&serviceName=Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA-Telegram:@Cephalon_ALA#🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.235.205:2087
+vless://9d2d11bd-0685-42a3-8bb2-3c2ed5158a69@127.0.0.1:2012?security=tls&flow=xtls-rprx-vision&sni=FI-ComPany-AlphaOmegA-TeaM.1AlphaOmega.Org.&type=tcp&fp=randomized&alpn=h3%2Ch2%2Chttp%2F1.1#4Kian-6645
