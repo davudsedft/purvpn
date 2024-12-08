@@ -1,1 +1,1 @@
-vless://96a107af-015e-4cfd-97ba-352398e5d53e@127.0.0.1:2012?security=tls&sni=mn.aftabe12.ir&type=ws&host=mn.aftabe12.ir&path=%2FTel%3A%40BLACK_VPN1&fp=chrome&alpn=h3%2Ch2%2Chttp%2F1.1#4Kian-6611
+vless://96a107af-015e-4cfd-97ba-352398e5d53e@127.0.0.1:2012?path=%2FTel%3A%40BLACK_VPN1&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=mn.aftabe12.ir&fp=chrome&type=ws&sni=mn.aftabe12.ir#4Kian-6611
