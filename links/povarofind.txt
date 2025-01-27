@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/davudsedft/purvpn/refs/heads/main/links/purkow.txt
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Splitted-By-Protocol/vless.txt
