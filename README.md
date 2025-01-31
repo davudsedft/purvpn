@@ -41,40 +41,6 @@ https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt
 
 
 
-طریقه ساخت apk
-وارد پوشه root  پروژه شده و در cmd دستور 
-cd /purvpn/
-
-```sh
-gradlew assembleDebug
-```
-و در لینوکس در ترمینال 
-```sh
-./gradlew assembleDebug
-```
-خروجی در پوشه 
-app/build/outputs/apk/release
-
-
-
-برای نسخه ریلیس باید در گریدل مشخصات keystore خودتون و وارد فایل گریدل کنین یا نسخه ریلیس را از همینجا دانلود کنین
-
-دستور cmd ویندوز برای خروجی نسخه ریلیس 
-
-
-```sh
-gradlew assembleRelease
-```
-
-دستور ترمینال در لینوکس ./ در اول دستور قرار بدین
-
-
-
-```sh
-./gradlew assembleRelease
-```
-
-
 
 
 ## Credits
