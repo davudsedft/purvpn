@@ -12,27 +12,6 @@
 </picture>
 </center>
 
-برای خروجی گرفتن از کتابخانه گو
-go v 1.22
-
-cd v2ray/libs
-
-go mod tidy
-
-go install golang.org/x/mobile/cmd/gomobile@latest
-
-go install golang.org/x/mobile/cmd/gobind@latest
-
-go get golang.org/x/mobile/cmd/gobind
-
-go get golang.org/x/mobile/cmd/gomobile
-
-go get golang.org/x/mobile
-
-gomobile init
-
-gomobile bind -ldflags '-s -w' -o purlast.aar -androidapi 21 -target android .
-
 
 
 سورس سرورها
