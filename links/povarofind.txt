@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/vless
+https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/vless
