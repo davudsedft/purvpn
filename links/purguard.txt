@@ -1,3 +1,6 @@
+w2w://162.159.192.161:7103->162.159.192.182:1074
+w2w://162.159.192.161:7103->162.159.192.182:1074
+w2w://162.159.192.161:7103->162.159.192.182:1074
 wireguard://cKjksdeeIlx8twgOs5A9KJwEfa62IElCawYYxdREKng%3D@[2606:4700:d0::49c0:7b9:ed71:3f02]:864?address=google.com&presharedkey=&reserved=140%2C113%2C246&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&mtu=1280#Warp
 wireguard://iLbIMKheOgP%2B86APBruvgfDCUsnV7cRH2zeav6prClI%3D@[2606:4700:d0::2d51:957f:27aa:2289]:7281?address=gsm.re&presharedkey=&reserved=75%2C133%2C119&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&mtu=1280#Warp
 wireguard://iKgu4apPYE0iccl%2B8Yl2qamSk1lZtpJShBjz6Z8lmUg%3D@[2606:4700:d1::f037:b37a:6a45:ad69]:3854?address=nokia.com&presharedkey=&reserved=89%2C57%2C35&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&mtu=1280#Warp
