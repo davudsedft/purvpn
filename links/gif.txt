@@ -1,2 +1,2 @@
 https://t.me/s/purnet/13337
-https://purnet.ir/gif/gif.gif
+https://raw.githubusercontent.com/beevbeev/wireguardgen/refs/heads/main/mygif.gif
