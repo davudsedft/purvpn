@@ -8,7 +8,7 @@
    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/davudsedft/purvpn/blob/main/links/cc.jpg" width="200px"  >
 </picture>
  <picture>
-   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/davudsedft/purvpn/blob/main/links/cc.jpg" width="200px"  >
+  
 </picture>
 </center>
 
