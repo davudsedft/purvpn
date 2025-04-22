@@ -14,11 +14,6 @@
 
 
 
-سورس سرورها
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt
-
-
 
 
 
