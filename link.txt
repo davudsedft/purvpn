@@ -1,1 +1,1 @@
-https://github.com/davudsedft/purvpn/releases/download/7.7/purvpn-mm-7.7-release.apk
+https://github.com/davudsedft/purvpn/releases/download/v7.8/purvpn-kk-7.8-release.apk
