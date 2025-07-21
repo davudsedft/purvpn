@@ -1,1 +1,1 @@
-https://github.com/davudsedft/purvpn/releases/download/8.1/purvpn.pu-8.1-release.apk
+https://github.com/davudsedft/purvpn/releases/download/8.2/purvpn-8.2-release.apk
