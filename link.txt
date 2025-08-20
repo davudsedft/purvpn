@@ -1,1 +1,1 @@
-https://github.com/davudsedft/purvpn/releases/download/8.5/purvpn_dns-8.5-release.apk
+https://github.com/davudsedft/purvpn/releases/download/8.6/purvpn-8.6-release.apk
