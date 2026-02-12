@@ -1,1 +1,1 @@
-https://github.com/davudsedft/purvpn/releases/download/11.5/purvpn+-11.5-release.apk
+https://github.com/davudsedft/purvpn/releases/download/11.6/purvpn-11.6-release.apk
