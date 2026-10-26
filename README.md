@@ -19,8 +19,21 @@
       <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/mm.jpg" width="140px"></td>
       <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/nn.jpg" width="140px"></td>
     </tr>
+    <tr>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/zz.jpg" width="140px"></td>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/xx.jpg" width="140px"></td>
+    </tr>
+    <tr>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/vv.jpg" width="140px"></td>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/pp.jpg" width="140px"></td>
+    </tr>
+    <tr>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/qq.jpg" width="140px"></td>
+      <td><img alt="purvpn" src="https://github.com/davudsedft/purvpn/blob/main/links/rr.jpg" width="140px"></td>
+    </tr>
   </table>
 </center>
+ 
 ---
 
 ## 🚀 یک هسته، ۱۴ پروتکل
@@ -90,6 +103,34 @@ purvpn در مجموع **۱۴ خانواده پروتکل** را پشتیبان�
 purvpn مجهز به یک **ترمینال قدرتمند** است که بخشی از قابلیت‌های **Termux** در آن ادغام شده است. این ترمینال **بدون نیاز به root** کار می‌کند و امکان اجرای توزیع‌های **Kali Linux** و **Molly** (ویندوز) را فراهم می‌آورد. این ویژگی purvpn را از یک کلاینت معمولی فراتر می‌برد و آن را به یک محیط کامل برای مدیریت شبکه و تست امنیت تبدیل می‌کند.
 
 ---
+
+---
+
+## 🛠️ ابزارها و اسکنرها
+
+purvpn تنها یک کلاینت نیست؛ یک جعبه‌ابزار کامل برای مدیریت، بهینه‌سازی و بازیابی اتصال است.
+
+### 🌐 اسکنرها
+
+- **اسکنر IP کلودفلر (Cloudflare IP Scanner)** — پیدا کردن IPهای تمیز و پرسرعت کلودفلر.
+- **اسکنر DNS UDP** — اسکن سریع سرورهای DNS از طریق UDP.
+- **اسکنر DNS معمولی** — اسکن استاندارد و سریع سرورهای DNS.
+- **اسکنر DNS عمیق (Deep DNS Scanner)** — با قابلیت اسکن **۸ میلیون** DNS با سرعت بالا؛ تست‌شده با **۱.۵ میلیون** DNS و تست از تونل **DNSTT** و **VayDNS** با سرعتی خیره‌کننده.
+- **اسکنر CDN IP (بخش Psiphon)** — اسکن CDN با سرعت بالا، سقف **۱۰۰٬۰۰۰** IP و تا **۱۰۰۰** پردازش موازی.
+- **اسکنرهای Endpoint** — یکپارچه با هسته برای پروتکل **Amnezia** و **Xray**.
+- **اسکنرهای پروکسی** — شامل **Proxy Checker** و **DoH Checker** در چهار بخش برنامه.
+- **اسکنر تغییر سرور کلودفلر** — در بخش ویرایش سرورها.
+- **ویرایش WireGuard با اسکنر Endpoint** — بهینه‌سازی و انتخاب بهترین Endpoint برای WireGuard.
+
+### 🔧 ابزارهای مدیریتی
+
+- **اشتراک تونل با دستگاه‌های دیگر** — به اشتراک گذاشتن تونل بین دستگاه‌ها.
+- **رمز کردن سرورها برای پیامک** — محافظت از اطلاعات سرورها.
+- **بک‌اپ از تنظیمات** — پشتیبان‌گیری و بازیابی کامل تنظیمات.
+- **تغییر سورس سرورها به هاست داخلی** — مناسب دوران **نت ملی**.
+- **تبادل اطلاعات و چت روی هاست داخلی** — ارتباط امن روی هاست داخلی.
+
+
 
 ## 🔗 منابع و اعتبارها (Credits)
 
