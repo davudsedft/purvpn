@@ -96,6 +96,9 @@ purvpn در مجموع **۱۴ خانواده پروتکل** را پشتیبان�
 شبکه ناشناسی Tor.
 > بدون رفرنس مشخص.
 
+### ۱۵. PingTunnel (ICMP Tunnel)
+تونل مبتنی بر ICMP که ترافیک TCP/UDP/SOCKS5 را از طریق بسته‌های ping منتقل می‌کند. مناسب برای شرایطی که TCP/UDP مسدود شده اما ICMP باز است.
+> برگرفته از [esrrhs/pingtunnel](https://github.com/esrrhs/pingtunnel)
 ---
 
 ## 🖥️ ترمینال داخلی
